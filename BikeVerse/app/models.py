@@ -27,6 +27,7 @@ class User(BaseModel):
     exp = db.Column(db.Integer, default=0)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     last_login = db.Column(db.DateTime, nullable=True)
+    is_verified = db.Column(db.Boolean, default=False)
 
     routes = db.relationship('Route', back_populates='user')
     rides = db.relationship('Ride', back_populates='user')

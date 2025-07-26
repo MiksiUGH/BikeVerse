@@ -23,3 +23,6 @@ class Config:
 
     # Время жизни refresh-токена (30 дней)
     JWT_REFRESH_TOKEN_EXPIRES = 2592000
+
+    # Для системы обновления пароля
+    RESET_SECRET_KEY = "super-reset-secret"
